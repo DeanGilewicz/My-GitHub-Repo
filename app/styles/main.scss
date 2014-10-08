@@ -19,8 +19,9 @@ body {
 
   nav {
     float: left;
-    width: 1100px;
+    width: 100%;
     margin-left: 90px;
+    font-size: 13px;
   }
 
   span,
@@ -29,6 +30,12 @@ body {
   img {
     float: left;
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  li, img, span:last-child {
+    padding-top: 10px;
   }
 
   .searchField {
@@ -40,7 +47,9 @@ body {
   }
 
   img {
-    width: 2%;
+    width: 20px;
+    margin-left: 200px;
+    margin-right: -10px;
   }
 }
 
