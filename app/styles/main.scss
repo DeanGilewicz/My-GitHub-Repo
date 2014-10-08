@@ -9,3 +9,74 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: HSLA(0, 0%, 0%, 1);
 }
+
+/************** HEADER SECTION ***********************/
+
+.header {
+  width: 100%;
+  overflow: auto;
+  background-color: HSLA(0, 0%, 96%, 1);
+
+  nav {
+    float: left;
+    width: 1100px;
+    margin-left: 90px;
+  }
+
+  span,
+  .searchField,
+  li,
+  img {
+    float: left;
+    margin-left: 15px;
+  }
+
+  .searchField {
+    width: 350px;
+  }
+
+  a {
+    color: HSLA(0, 0%, 0%, 1);
+  }
+
+  img {
+    width: 2%;
+  }
+}
+
+
+
+
+
+.mainCon {
+  @include outer-container;
+  background-color: yellow;
+}
+
+.sidebar {
+  @include span-columns(3);
+  background-color: green;
+}
+
+.mainArea {
+  @include span-columns(9);
+  background-color: red;
+}
+
+// .tabs {
+//
+// }
+//
+// .repoBar {
+//
+// }
+//
+// .repos {
+//
+// }
+
+.footer {
+  height: 40px;
+  width: 100%;
+  background-color: HSLA(0, 0%, 96%, 1);
+}
