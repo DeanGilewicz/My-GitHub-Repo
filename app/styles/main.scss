@@ -16,42 +16,62 @@ body {
   width: 100%;
   overflow: auto;
   background-color: HSLA(0, 0%, 96%, 1);
+}
 
-  nav {
+.genNav {
+  float: left;
+  width: 740px;
+  margin: 10px 0px 10px 112px;
+  font-size: 13px;
+
+  span {
     float: left;
-    width: 100%;
-    margin-left: 90px;
-    font-size: 13px;
+    margin-right: 14px;
   }
 
-  span,
-  .searchField,
-  li,
-  img {
+  #searchField {
     float: left;
-    margin-left: 15px;
+    width: 395px;
+    padding: 8px 0px 8px 8px;
+    color: HSLA(240, 1%, 67%, 1);
+  }
+
+  li a {
+    float: left;
+    margin-left: 20px;
     margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  li, img, span:last-child {
-    padding-top: 10px;
-  }
-
-  .searchField {
-    width: 350px;
-  }
-
-  a {
     color: HSLA(0, 0%, 0%, 1);
-  }
-
-  img {
-    width: 20px;
-    margin-left: 200px;
-    margin-right: -10px;
+    font-size: 13px;
+    font-weight: bold;
   }
 }
+
+.userNav {
+  float: right;
+  width: 360px;
+  margin-top: 20px;
+  color: HSLA(0, 0%, 0%, 1);
+  font-size: 13px;
+
+  img {
+    float: left;
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  span {
+    float: left;
+    font-size: 15px;
+  }
+
+  li {
+    float: left;
+    margin: 0 12px;
+  }
+}
+
+
+
 
 /************** MAIN SECTION ***********************/
 
