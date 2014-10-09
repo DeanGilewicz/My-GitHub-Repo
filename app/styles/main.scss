@@ -53,9 +53,7 @@ body {
   }
 }
 
-
-
-
+/************** MAIN SECTION ***********************/
 
 .mainCon {
   @include outer-container;
@@ -72,6 +70,82 @@ body {
   background-color: red;
 }
 
+/************** SIDEBAR SECTION ***********************/
+
+.sidebar {
+  text-decoration: none;
+  color: HSLA(0, 0%, 0%, 1);
+}
+
+.profile {
+
+  img {
+    width: 230px;
+    border-radius: 10px;
+  }
+
+  span {
+   display: block;
+   font-size: 24px;
+
+     &:last-child {
+       font-size: 18px;
+       margin-bottom: 25px;
+     }
+  }
+}
+
+.member {
+  border-top: 1px solid HSLA(0, 0%, 93%, 1);
+  border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
+  margin-bottom: 30px;
+
+  span {
+  margin: 0px 8px;
+  padding: 20px 0px;
+  }
+}
+
+.social {
+  overflow: auto;
+  text-decoration: none;
+  color: HSLA(0, 0%, 0%, 1);
+
+  li {
+    float: left;
+    font-size: 12px;
+    margin: 0 18px;
+    color: HSLA(0, 0%, 60%, 1);
+
+    span {
+      display: block;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      color: HSLA(210, 53%, 51%, 1);
+    }
+  }
+}
+
+.orgs {
+  clear: both;
+  margin-top: 18px;
+
+  span {
+    display: block;
+    font-size: 18px;
+  }
+
+  img {
+    display: inline-block;
+    width: 42px;
+    margin-top: 5px;
+  }
+}
+
+
+
+
 // .tabs {
 //
 // }
@@ -83,6 +157,8 @@ body {
 // .repos {
 //
 // }
+
+/************** FOOTER SECTION ***********************/
 
 .footer {
   height: 40px;
