@@ -52,15 +52,13 @@
       <div class="mainCon">
 
         <div class="sidebar">
+
             <section class="profile">
-              <img src="https://avatars0.githubusercontent.com/u/8864519?v=2&s=460" alt="large profile picture" />
-              <span>Name</span>
-              <span>Username</span>
             </section>
+
             <section class="member">
-              <span class="octicon octicon-clock"></span>
-              <span>Joined on Sep 22, 2014</span>
             </section>
+
             <section class="social">
               <ul>
                 <li><span>0</span>Followers</li>
@@ -68,6 +66,8 @@
                 <li><span>0</span>Following</li>
               </ul>
             </section>
+
+
             <section class="orgs">
               <span>Organizations</span>
               <img src="https://avatars2.githubusercontent.com/u/7996991?v=2&s=84" alt="JavaScript Icon" />
@@ -94,7 +94,7 @@
               </ul>
               <div class="editBtn">
                 <span class="octicon octicon-pencil"></span>
-                <button class="Edit profile" name="button">Edit profile</button>
+                <button class="Edit_profile" name="button">Edit profile</button>
               </div>
 
             </nav>
@@ -199,8 +199,21 @@
 
     </div>
 
+    <script type="text/template" id="profile">
 
-    <script src="scripts/token.js"></script>
+      <img src="<%= avatar_url %>"/>
+      <span><%= name %></span>
+      <span><%= login %></span>
+
+    </script>
+
+    <script type="text/template" id="member_since">
+
+      <span class="octicon octicon-clock"></span>
+      <span><%= created_at %></span>
+
+    </script>
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -208,6 +221,8 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <script src="scripts/token.js"></script>
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
