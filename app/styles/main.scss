@@ -72,39 +72,6 @@ body {
 }
 
 
-
-/************** MAIN SECTION ***********************/
-
-.mainCon {
-  @include outer-container;
-  background-color: yellow;
-}
-
-.sidebar {
-  @include span-columns(3);
-  background-color: green;
-}
-
-.mainArea {
-  @include span-columns(9);
-  background-color: red;
-}
-
-
-// .tabs {
-//
-// }
-//
-// .repoBar {
-//
-// }
-//
-// .repos {
-//
-// }
-
-
-
 /************** SIDEBAR SECTION ***********************/
 
 .sidebar {
@@ -178,6 +145,36 @@ body {
   }
 }
 
+
+/************** MAIN SECTION ***********************/
+
+.mainCon {
+  @include outer-container;
+  background-color: yellow;
+}
+
+.sidebar {
+  @include span-columns(3);
+  background-color: green;
+}
+
+.mainArea {
+  @include span-columns(9);
+  background-color: red;
+}
+
+
+.tabs {
+  @include span-columns(9);
+}
+
+.repoBar {
+  @include span-columns(9);
+}
+
+.repos {
+  @include span-columns(9);
+}
 
 
 /************** FOOTER SECTION ***********************/
