@@ -10,6 +10,7 @@ body {
   color: HSLA(0, 0%, 0%, 1);
 }
 
+
 /************** HEADER SECTION ***********************/
 
 .header {
@@ -72,7 +73,6 @@ body {
 
 
 
-
 /************** MAIN SECTION ***********************/
 
 .mainCon {
@@ -89,6 +89,21 @@ body {
   @include span-columns(9);
   background-color: red;
 }
+
+
+// .tabs {
+//
+// }
+//
+// .repoBar {
+//
+// }
+//
+// .repos {
+//
+// }
+
+
 
 /************** SIDEBAR SECTION ***********************/
 
@@ -165,23 +180,29 @@ body {
 
 
 
-
-// .tabs {
-//
-// }
-//
-// .repoBar {
-//
-// }
-//
-// .repos {
-//
-// }
-
 /************** FOOTER SECTION ***********************/
 
 .footer {
-  height: 40px;
+  overflow: auto;
   width: 100%;
+  padding: 12px 0px;
   background-color: HSLA(0, 0%, 96%, 1);
+  font-size: 12px;
+  color: HSLA(0, 0%, 0%, 1);
+
+  p,
+  span,
+  .box1,
+  .box2 {
+    float: left;
+
+    li {
+      float: left;
+      margin: 0 10px;
+    }
+  }
+
+  p {
+    margin-left: 110px;
+  }
 }
