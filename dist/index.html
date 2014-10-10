@@ -83,83 +83,29 @@
                 <li class="tab-header-and-content">
                   <a href="#" class="tab-link"><span class="octicon octicon-repo"></span>Repositories</a>
                   <div class="tab-content">
-                    <p>
-                      <nav class="repoBar">
-                        <div class="searchBox">
-                          <input id="findRepo" type="text" name="input" value="Find a repository..." />
-                          <button class="searchBtn" name="button">Search</button>
-                        </div>
-                        <div class="repoLinks">
-                          <ul>
-                            <li><a href="#"></a>All</li>
-                            <li><a href="#"></a>Public</li>
-                            <li><a href="#"></a>Private</li>
-                            <li><a href="#"></a>Sources</li>
-                            <li><a href="#"></a>Forks</li>
-                            <li><a href="#"></a>Mirrors</li>
-                          </ul>
-                          <span class="octicon octicon-repo"></span>
-                          <button class="New" name="button">New</button>
-                        </div>
-                      </nav>
-
-                      <div class="repos">
-                        <ul>
-                          <li class="repo1 clear">
-                            <div class="boxLeft">
-                              <span>My-GitHub-Repo</span>
-                              <span>Updated 14 hours ago</span>
-                            </div>
-                            <div class="boxRight">
-                              <span>repo-list-stats</span>
-                              <div>
-                                <span class="octicon octicon-star"></span>
-                                <span>list-stat-item</span>
-                              </div>
-                              <div>
-                                <span class="octicon octicon-git-branch"></span>
-                                <span>stat-item</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="repo2 clear">
-                            <div class="boxLeft">
-                              <span>My-GitHub-Repo</span>
-                              <span>Updated 14 hours ago</span>
-                            </div>
-                            <div class="boxRight">
-                              <span>repo-list-stats</span>
-                              <div>
-                                <span class="octicon octicon-star"></span>
-                                <span>list-stat-item</span>
-                              </div>
-                              <div>
-                                <span class="octicon octicon-git-branch"></span>
-                                <span>stat-item</span>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="repo3 clear">
-
-
-                          </li>
-                          <li class="repo4 clear">
-
-
-                          </li>
-                          <li class="repo5 clear">
-
-
-                          </li>
-                          <li class="repo6 clear">
-
-
-                          </li>
-                        </ul>
+                    <nav class="repoBar">
+                      <div class="searchBox">
+                        <input id="findRepo" type="text" name="input" placeholder="Find a repository..." />
+                        <button class="searchBtn" name="button">Search</button>
                       </div>
+                      <div class="repoLinks">
+                        <ul>
+                          <li><a href="#"></a>All</li>
+                          <li><a href="#"></a>Public</li>
+                          <li><a href="#"></a>Private</li>
+                          <li><a href="#"></a>Sources</li>
+                          <li><a href="#"></a>Forks</li>
+                          <li><a href="#"></a>Mirrors</li>
+                        </ul>
+                        <span class="octicon octicon-repo"></span>
+                        <button class="New" name="button">New</button>
+                      </div>
+                    </nav>
 
+                    <div class="repo_list">
 
-                    </p>
+                    </div>
+
                   </div>
                 </li>
                 <li class="tab-header-and-content">
@@ -260,6 +206,26 @@
         <li><img src="<%= avatar_url %>"/></li>
       </ul>
     </script>
+
+    <script type="text/template" id="project_details">
+
+      <div class="repos">
+        <div class="repo_left">
+          <span><%= name %></span>
+          <span><%= updated_at %></span>
+        </div>
+
+        <div class="repo_right">
+          <span><%= language %></span>
+          <span class="octicon octicon-star"></span>
+          <span><%= stargazers_count %></span>
+          <span class="octicon octicon-git-branch"></span>
+          <span><%= forks_count %></span>
+        </div>
+      </div>
+
+    </script>
+
 
 
     <script src="scripts/vendor.js"></script>
