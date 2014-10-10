@@ -130,22 +130,33 @@ body {
 
 .social {
   overflow: auto;
-  clear: both;
 
   li {
-    float: left;
+    width: 50px;
     font-size: 12px;
-    margin: 0 18px;
     color: HSLA(0, 0%, 60%, 1);
+    margin: 0 16px;
+    text-align: center;
 
     span {
       display: block;
-      text-align: center;
       font-size: 30px;
       font-weight: 800;
       color: HSLA(210, 53%, 51%, 1);
     }
   }
+}
+
+li.left {
+  float: left;
+}
+
+li.center {
+  float: left;
+}
+
+li.right {
+  float: right;
 }
 
 .orgs {
