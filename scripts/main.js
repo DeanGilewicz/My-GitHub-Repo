@@ -1,38 +1,24 @@
 $(document).ready( function (){
 
-  $('.accordion-tabs-minimal').each(function(index) {
-   $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
-  });
+// TABS - REFILLS //
 
-  $('.accordion-tabs-minimal').on('click', 'li > a', function(event) {
-    if (!$(this).hasClass('is-active')) {
-      event.preventDefault();
-      var accordionTabs = $(this).closest('.accordion-tabs-minimal')
-      accordionTabs.find('.is-open').removeClass('is-open').hide();
+$('.accordion-tabs-minimal').each(function(index) {
+ $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+});
 
-      $(this).next().toggleClass('is-open').toggle();
-      accordionTabs.find('.is-active').removeClass('is-active');
-      $(this).addClass('is-active');
-    } else {
-      event.preventDefault();
-    }
-  });
+$('.accordion-tabs-minimal').on('click', 'li > a', function(event) {
+  if (!$(this).hasClass('is-active')) {
+    event.preventDefault();
+    var accordionTabs = $(this).closest('.accordion-tabs-minimal')
+    accordionTabs.find('.is-open').removeClass('is-open').hide();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    $(this).next().toggleClass('is-open').toggle();
+    accordionTabs.find('.is-active').removeClass('is-active');
+    $(this).addClass('is-active');
+  } else {
+    event.preventDefault();
+  }
+});
 
 
 
@@ -106,27 +92,23 @@ var starred_api = 'https://api.github.com/users/DeanGilewicz/starred';
 
 // STARRED TEMPLATES //
 
-// var starred_template = $('#starred').html();// FOLLOWERS, STARRED, FOLLOWING //
-// var s_template = _.template(starred_template);
+var starred_template = $('#starred').html();// FOLLOWERS, STARRED, FOLLOWING //
+var s_template = _.template(starred_template);
 
 
-// $.getJSON(starred_api).done( function (starred_data) {
-//
-//     stars_num = starred_data.length;
-//     $('.social').append(total);
-//
-//   });
+$.getJSON(starred_api).done( function (starred_data) {
 
-// $.getJSON(starred_api).done( function (starred_data) {
-//
-//   var total = starred_data.reduce(function(a, b) {
-//     return a.value + b.value;
-//   });
-//
-//   $('.social').append(s_template(total));
-//
-// });
+    stars_num = starred_data.length;
 
+    var star_object = {
+      stargazers_count: stars_num
+    }
+
+    // console.log(star_object);
+
+    $('.social').append(s_template(star_object));
+
+  });
 
 
 
