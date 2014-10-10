@@ -82,36 +82,41 @@ body {
 .profile {
 
   img {
-    width: 230px;
     border-radius: 10px;
   }
 
   span {
-   display: block;
-   font-size: 24px;
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
 
      &:last-child {
-       font-size: 18px;
+       font-size: 20px;
        margin-bottom: 25px;
      }
   }
 }
 
 .member {
+  overflow: auto;
   border-top: 1px solid HSLA(0, 0%, 93%, 1);
   border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
   margin-bottom: 30px;
-
-  span {
-  margin: 0px 8px;
   padding: 20px 0px;
+
+  li {
+    float: left;
+    color: HSLA(0, 0%, 80%, 1);
+  }
+
+  span:last-child {
+    color: HSLA(0, 0%, 0%, 1);
   }
 }
 
 .social {
   overflow: auto;
-  text-decoration: none;
-  color: HSLA(0, 0%, 0%, 1);
+  clear: both;
 
   li {
     float: left;
@@ -150,16 +155,15 @@ body {
 
 .mainCon {
   @include outer-container;
-  background-color: yellow;
 }
 
 .sidebar {
   @include span-columns(3);
-  background-color: green;
 }
 
 .mainArea {
   @include span-columns(9);
+  width: 76.7%;
   background-color: red;
 }
 

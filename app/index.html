@@ -54,9 +54,11 @@
         <div class="sidebar">
 
             <section class="profile">
+              <!-- script profile -->
             </section>
 
             <section class="member">
+              <!-- script contact -->
             </section>
 
             <section class="social">
@@ -207,10 +209,22 @@
 
     </script>
 
-    <script type="text/template" id="member_since">
+    <script type="text/template" id="contact">
 
-      <span class="octicon octicon-clock"></span>
-      <span><%= created_at %></span>
+      <ul>
+        <li>
+          <span class="octicon octicon-mail"></span>
+          <span><a href="#"><%= email %></a></span>
+        </li>
+        <li>
+          <span class="octicon octicon-link"></span>
+          <span><a href="#"><%= blog %></a></span>
+        </li>
+        <li>
+          <span class="octicon octicon-clock"></span>
+          <span><%= created_at %></span>
+        </li>
+      </ul>
 
     </script>
 
