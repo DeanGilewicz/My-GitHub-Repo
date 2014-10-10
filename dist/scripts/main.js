@@ -106,23 +106,27 @@ var starred_api = 'https://api.github.com/users/DeanGilewicz/starred';
 
 // STARRED TEMPLATES //
 
-var starred_template = $('#starred').html();// FOLLOWERS, STARRED, FOLLOWING //
-var s_template = _.template(starred_template);
+// var starred_template = $('#starred').html();// FOLLOWERS, STARRED, FOLLOWING //
+// var s_template = _.template(starred_template);
 
 
-$.getJSON(starred_api).done( function (starred_data) {
+// $.getJSON(starred_api).done( function (starred_data) {
+//
+//     stars_num = starred_data.length;
+//     $('.social').append(total);
+//
+//   });
 
-    stars_num = starred_data.length;
+// $.getJSON(starred_api).done( function (starred_data) {
+//
+//   var total = starred_data.reduce(function(a, b) {
+//     return a.value + b.value;
+//   });
+//
+//   $('.social').append(s_template(total));
+//
+// });
 
-    var star_object = {
-      starrrrs: stars_num
-    }
-
-    console.log(star_object);
-
-    $('.social').append(s_template(star_object));
-
-  });
 
 
 

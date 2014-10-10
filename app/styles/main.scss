@@ -22,7 +22,7 @@ body {
 .genNav {
   float: left;
   width: 740px;
-  margin: 10px 0px 10px 112px;
+  margin: 10px 0px 0px 112px;
   font-size: 13px;
 
   span {
@@ -168,6 +168,7 @@ body {
 
 .mainCon {
   @include outer-container;
+  margin-top: 15px;
 }
 
 .sidebar {
@@ -176,29 +177,99 @@ body {
 
 .mainArea {
   @include span-columns(9);
-  background-color: red;
 }
 
-.tabs {
-  @include span-columns(12);
 
-  li {
-    float: left;
-    margin-right: 20px;
-    display: inline-block;
-    padding: 8px 12px 7px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #666;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-bottom: 0;
+.accordion-tabs-minimal {
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: $base-background-color;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  margin-bottom: $base-spacing;
+
+  li.tab-header-and-content {
+    @include media($tab-mode) {
+      display: inline;
+    }
   }
 
-  .editBtn {
-    float: right;
+  a.tab-link {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: 400;
+    padding: $base-spacing/2 $gutter;
+
+    @include media($tab-mode) {
+      //@include inline-block;
+      display: inline-block;
+      border-top: 0;
+    }
+
+    &:hover {
+      color: $base-link-color;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      border-bottom: 0;
+
+      @include media($tab-mode) {
+        border: $tab-border;
+        border-bottom-color: $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    padding: $base-spacing $gutter;
+
+    @include media($tab-mode) {
+      border-top: $tab-border;
+      float: left;
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+// .tabs {
+//   @include span-columns(12);
+//
+//   li {
+//     float: left;
+//     margin-right: 20px;
+//     display: inline-block;
+//     padding: 8px 12px 7px;
+//     font-size: 16px;
+//     line-height: 20px;
+//     color: #666;
+//     text-decoration: none;
+//     border: 1px solid transparent;
+//     border-bottom: 0;
+//   }
+//
+//   .editBtn {
+//     float: right;
+//   }
+// }
 
 .repoBar {
   @include span-columns(12);
