@@ -254,33 +254,13 @@ li.right {
 }
 
 
+.tabs {
+  @include span-columns(12);
 
-
-
-
-
-
-
-// .tabs {
-//   @include span-columns(12);
-//
-//   li {
-//     float: left;
-//     margin-right: 20px;
-//     display: inline-block;
-//     padding: 8px 12px 7px;
-//     font-size: 16px;
-//     line-height: 20px;
-//     color: #666;
-//     text-decoration: none;
-//     border: 1px solid transparent;
-//     border-bottom: 0;
-//   }
-//
-//   .editBtn {
-//     float: right;
-//   }
-// }
+  .editBtn {
+    float: right;
+  }
+}
 
 .repoBar {
   @include span-columns(12);
