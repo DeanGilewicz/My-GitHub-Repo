@@ -92,7 +92,7 @@ var starred_api = 'https://api.github.com/users/DeanGilewicz/starred';
 
 // STARRED TEMPLATES //
 
-var starred_template = $('#starred').html();// FOLLOWERS, STARRED, FOLLOWING //
+var starred_template = $('#starred').html();// STARRED
 var s_template = _.template(starred_template);
 
 
@@ -112,18 +112,26 @@ $.getJSON(starred_api).done( function (starred_data) {
 
 
 
+// REPO API //
 
 
 var repo_api = 'https://api.github.com/users/DeanGilewicz/repos';
 
 
+// REPO TEMPLATES //
+
+var project_template = $('#project_details').html();// LANGUAGE  NAME
+var pro_template = _.template(project_template);
 
 
+$.getJSON(repo_api).done( function (repo_data) {
 
+  _.each(repo_data, function(x) {
 
+    $('.repo_list').append(pro_template(x));
 
-
-
+  });
+});
 
 
 
