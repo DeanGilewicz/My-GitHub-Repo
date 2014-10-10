@@ -39,8 +39,7 @@
         </nav>
         <nav class="userNav">
           <div class="log">
-            <img src="https://avatars0.githubusercontent.com/u/8864519?v=2&s=460" alt="small profile picture"/>
-            <span>DeanGilewicz</span>
+            <!-- user_log -->
           </div>
           <ul class="navIcons">
             <li><span class="octicon octicon-plus"></span></li>
@@ -69,10 +68,9 @@
 
 
             <section class="orgs">
-              <span>Organizations</span>
-              <img src="https://avatars2.githubusercontent.com/u/7996991?v=2&s=84" alt="JavaScript Icon" />
-              <img src="https://avatars2.githubusercontent.com/u/9014378?v=2&s=84" alt="The Iron Yard Hackathon Icon" />
+
             </section>
+
         </div>
 
         <div class="mainArea">
@@ -199,16 +197,20 @@
 
     </div>
 
-    <script type="text/template" id="profile">
+    <script type="text/template" id="sign_in">
+      <img src="<%= avatar_url %>"/>
+      <span><%= login %></span>
+    </script>
 
+
+    <script type="text/template" id="profile">
       <img src="<%= avatar_url %>"/>
       <span><%= name %></span>
       <span><%= login %></span>
-
     </script>
 
-    <script type="text/template" id="contact">
 
+    <script type="text/template" id="contact">
       <ul>
         <li>
           <span class="octicon octicon-mail"></span>
@@ -223,20 +225,25 @@
           <span><%= created_at %></span>
         </li>
       </ul>
-
     </script>
 
-    <script type="text/template" id="follow">
 
+    <script type="text/template" id="follow">
       <ul>
         <li><span><%= followers %></span>Followers</li>
         <li><span>fix</span>Starred</li>
         <li><span><%= following %></span>Following</li>
       </ul>
-
     </script>
 
 
+    <script type="text/template" id="organizations">
+      <span>Organizations</span>
+      <ul>
+        <li><img src="https://avatars2.githubusercontent.com/u/7996991?v=2&s=84" alt="JavaScript Icon" /></li>
+        <li><img src="https://avatars2.githubusercontent.com/u/9014378?v=2&s=84" alt="The Iron Yard Hackathon Icon" /></li>
+      </ul>
+    </script>
 
 
     <!-- build:js scripts/vendor.js -->

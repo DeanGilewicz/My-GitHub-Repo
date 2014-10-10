@@ -68,6 +68,7 @@ body {
 
     span {
       float: left;
+      font-size: 14px;
       font-weight: 800;
     }
   }
@@ -148,18 +149,17 @@ body {
 }
 
 .orgs {
-  clear: both;
   margin-top: 18px;
 
-  span {
-    display: block;
+  li {
+    float: left;
     font-size: 18px;
   }
 
   img {
-    display: inline-block;
     width: 42px;
     margin-top: 5px;
+    margin-right: 5px;
   }
 }
 
