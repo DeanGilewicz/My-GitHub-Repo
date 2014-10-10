@@ -33,41 +33,53 @@ body {
   #searchField {
     float: left;
     width: 395px;
+    margin-right: 10px;
     padding: 8px 0px 8px 8px;
     color: HSLA(240, 1%, 67%, 1);
   }
 
   li a {
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 10px;
     color: HSLA(0, 0%, 0%, 1);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
   }
 }
 
 .userNav {
   float: right;
-  width: 360px;
+  width: 300px;
   margin-top: 20px;
+  margin-right: 108px;
   color: HSLA(0, 0%, 0%, 1);
   font-size: 13px;
 
-  img {
+  .log {
     float: left;
-    width: 20px;
-    margin-right: 8px;
+    width: 140px;
+
+    img {
+      float: left;
+      width: 20px;
+      margin-right: 5px;
+    }
+
+    span {
+      float: left;
+      font-weight: 800;
+    }
   }
 
-  span {
-    float: left;
-    font-size: 15px;
+  .navIcons {
+    float: right;
+    width: 135px;
   }
 
   li {
     float: left;
-    margin: 0 12px;
+    margin-left: 20px;
   }
 }
 
@@ -98,6 +110,7 @@ body {
 }
 
 .member {
+  clear: both;
   overflow: auto;
   border-top: 1px solid HSLA(0, 0%, 93%, 1);
   border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
@@ -163,13 +176,11 @@ body {
 
 .mainArea {
   @include span-columns(9);
-  width: 76.7%;
   background-color: red;
 }
 
 .tabs {
   @include span-columns(12);
-  overflow: auto;
 
   li {
     float: left;

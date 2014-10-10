@@ -29,17 +29,19 @@
       <div class="header">
         <nav class="genNav">
           <span class="mega-octicon octicon-mark-github"></span>
-          <input id="searchField" type="text" name="input" value="Search GitHub" />
+          <input id="searchField" type="text" name="input" placeholder="Search GitHub" />
           <ul>
-            <li><a href="#">Explore</li>
-            <li><a href="#">Gist</li>
-            <li><a href="#">Blog</li>
-            <li><a href="#">Help</li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Gist</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help</a></li>
           </ul>
         </nav>
         <nav class="userNav">
-          <img src="https://avatars0.githubusercontent.com/u/8864519?v=2&s=460" alt="small profile picture"/>
-          <span>DeanGilewicz</span>
+          <div class="log">
+            <img src="https://avatars0.githubusercontent.com/u/8864519?v=2&s=460" alt="small profile picture"/>
+            <span>DeanGilewicz</span>
+          </div>
           <ul class="navIcons">
             <li><span class="octicon octicon-plus"></span></li>
             <li><span class="octicon octicon-inbox"></span></li>
@@ -62,11 +64,7 @@
             </section>
 
             <section class="social">
-              <ul>
-                <li><span>0</span>Followers</li>
-                <li><span>3</span>Starred</li>
-                <li><span>0</span>Following</li>
-              </ul>
+              <!-- script follow -->
             </section>
 
 
@@ -227,6 +225,18 @@
       </ul>
 
     </script>
+
+    <script type="text/template" id="follow">
+
+      <ul>
+        <li><span><%= followers %></span>Followers</li>
+        <li><span>fix</span>Starred</li>
+        <li><span><%= following %></span>Following</li>
+      </ul>
+
+    </script>
+
+
 
 
     <!-- build:js scripts/vendor.js -->
