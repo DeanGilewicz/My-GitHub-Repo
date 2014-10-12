@@ -6,7 +6,7 @@
 // Custom Styles
 body {
   background: HSLA(0, 0%, 100%, 1);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Arial, sans-serif;
   color: HSLA(0, 0%, 0%, 1);
 }
 
@@ -149,6 +149,7 @@ body {
 
 li.left {
   float: left;
+  display: inline;
 }
 
 li.center {
@@ -179,7 +180,7 @@ li.right {
 
 .mainCon {
   @include outer-container;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .sidebar {
@@ -223,9 +224,9 @@ li.right {
       border-top: 0;
     }
 
-    &:hover {
-      color: $base-link-color;
-    }
+    // &:hover {
+    //   color: $base-link-color;
+    // }
 
     &:focus {
       outline: none;
@@ -259,13 +260,34 @@ li.right {
 
   .editBtn {
     float: right;
+    margin-top: 7px;
+    font-size: 15px;
+
+    span {
+      margin-right: 5px;
+    }
+
+    .Edit_profile {
+      background-color: HSLA(0, 0%, 96%, 1);
+      color: HSLA(0, 0%, 20%, 1);
+      padding: 5px 10px;
+      border: 1px solid HSLA(0, 0%, 84%, 1);
+
+      &:hover {
+        background-color: HSLA(0, 0%, 90%, 1);
+      }
+    }
+  }
+
+  .tab-link span{
+    margin-right: 4px;
   }
 }
 
 .repoBar {
   @include span-columns(12);
   padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid red;
 
   #findRepo {
     display: inline;
