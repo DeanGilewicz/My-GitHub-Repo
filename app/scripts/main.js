@@ -98,7 +98,7 @@ var s_template = _.template(starred_template);
 
 $.getJSON(starred_api).done( function (starred_data) {
 
-    stars_num = starred_data.length;
+    var stars_num = starred_data.length;
 
     var star_object = {
       stargazers_count: stars_num
