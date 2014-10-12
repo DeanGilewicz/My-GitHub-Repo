@@ -401,25 +401,36 @@ li.right {
 
 .footer {
   overflow: auto;
-  width: 100%;
-  padding: 12px 0px;
-  background-color: HSLA(0, 0%, 96%, 1);
-  font-size: 12px;
-  color: HSLA(0, 0%, 0%, 1);
+  width: 1090px;
+  margin: 20px auto 0px auto;
+  padding: 38px 0px;
+  border-top: 1px solid HSLA(0, 0%, 93%, 1);
+  font-size: 13px;
+  color: HSLA(240, 3%, 48%, 1);
 
-  p,
-  span,
-  .box1,
-  .box2 {
+  .box1 {
     float: left;
+    width: 380px;
 
     li {
       float: left;
-      margin: 0 10px;
+      margin-right: 18px;
     }
   }
 
-  p {
-    margin-left: 110px;
+  .box2 {
+    float: right;
+    width: 305px;
+
+    li {
+      float: left;
+      margin-left: 18px;
+    }
+  }
+
+  span {
+    font-size: 27px;
+    color: HSLA(0, 0%, 80%, 1);
+    margin-left: 150px;
   }
 }
