@@ -22,7 +22,7 @@ body {
 .genNav {
   float: left;
   width: 740px;
-  margin: 10px 0px 0px 112px;
+  margin: 10px 0px 0px 100px;
   font-size: 13px;
 
   span {
@@ -432,5 +432,13 @@ li.right {
     font-size: 27px;
     color: HSLA(0, 0%, 80%, 1);
     margin-left: 150px;
+
+    &:hover {
+      color: HSLA(0, 0%, 70%, 1);
+    }
+  }
+
+  li a:hover {
+    text-decoration: underline;
   }
 }
