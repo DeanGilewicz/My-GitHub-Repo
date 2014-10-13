@@ -31,21 +31,29 @@
           <a href="https://github.com/"><span class="mega-octicon octicon-mark-github"></span></a>
           <input id="searchField" type="text" name="input" placeholder="Search GitHub" />
           <ul>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Gist</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="https://github.com/explore">Explore</a></li>
+            <li><a href="https://gist.github.com/">Gist</a></li>
+            <li><a href="https://github.com/blog">Blog</a></li>
+            <li><a href="https://help.github.com/">Help</a></li>
           </ul>
         </nav>
         <nav class="userNav">
           <div class="log">
-            <!-- user_log -->
+            <!-- user_log script -->
           </div>
           <ul class="navIcons">
-            <li><span class="octicon octicon-plus"></span></li>
-            <li><span class="octicon octicon-inbox"></span></li>
-            <li><span class="octicon octicon-gear"></span></li>
-            <li><span class="octicon octicon-sign-out"></span></li>
+            <li class="cross">
+              <a href="#"><span class="octicon octicon-plus"></span><span class="triangle"></span></a>
+            </li>
+            <li class="mail">
+              <a href="https://github.com/notifications"><span class="octicon octicon-inbox"></span></a>
+            </li>
+            <li class="wheel">
+              <a href="https://github.com/settings/profile"><span class="octicon octicon-gear"></span></a>
+            </li>
+            <li class="door">
+              <a href="https://github.com/"><span class="octicon octicon-sign-out"></span></a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -55,20 +63,20 @@
         <div class="sidebar">
 
             <section class="profile">
-              <!-- script profile -->
+              <!-- profile script -->
             </section>
 
             <section class="member">
-              <!-- script contact -->
+              <!-- contact script -->
             </section>
 
             <section class="social">
-              <!-- script follow -->
+              <!-- follow script -->
             </section>
 
             <section class="orgs">
               <span>Organizations</span>
-              <!-- script organiztions -->
+              <!-- organiztions script -->
             </section>
 
         </div>
@@ -150,9 +158,11 @@
 
     </div>
 
-    <script type="text/template" id="sign_in">
-      <img src="<%= avatar_url %>"/>
-      <span><%= login %></span>
+    <script type="text/template" id="user_log">
+      <a href="https://github.com/DeanGilewicz">
+        <img src="<%= avatar_url %>"/>
+        <span><%= login %></span>
+      </a>
     </script>
 
 

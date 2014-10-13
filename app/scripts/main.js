@@ -29,7 +29,7 @@ var user_api = 'https://api.github.com/users/DeanGilewicz';
 
 // USER TEMPLATES //
 
-var user_log_template = $('#sign_in').html();// IMAGE AND USERNAME //
+var user_log_template = $('#user_log').html();// IMAGE AND USERNAME //
 var ul_template = _.template(user_log_template);
 
 var profile_template = $('#profile').html();// PROFILE PIC, NAME, USERNAME //
@@ -133,6 +133,14 @@ $.getJSON(repo_api).done( function (repo_data) {
   });
 });
 
+
+// HEADER NAVIGATION HOVER //
+
+// $('li').hover (function () {
+//   $(this).toggleClass('iconReveal');
+// }
+//
+// );
 
 
 });

@@ -22,65 +22,104 @@ body {
 .genNav {
   float: left;
   width: 740px;
-  margin: 10px 0px 0px 100px;
+  margin: 10px 0px 0px 98px;
   font-size: 13px;
 
   span {
     float: left;
-    margin-right: 14px;
+    margin-right: 12px;
+    color: HSLA(0, 0%, 20%, 1);
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
   }
 
   #searchField {
     float: left;
     width: 395px;
     margin-right: 10px;
+    border-radius: 5px;
     padding: 8px 0px 8px 8px;
-    color: HSLA(240, 1%, 67%, 1);
   }
 
   li a {
     float: left;
     margin-left: 10px;
-    margin-top: 10px;
+    margin-right: 8px;
+    margin-top: 6px;
     color: HSLA(0, 0%, 0%, 1);
     font-size: 14px;
     font-weight: bold;
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
   }
 }
 
 .userNav {
   float: right;
   width: 300px;
-  margin-top: 20px;
-  margin-right: 108px;
-  color: HSLA(0, 0%, 0%, 1);
+  margin-top: 15px;
+  margin-right: 76px;
   font-size: 13px;
+
+  a {
+    color: HSLA(0, 0%, 0%, 1);
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
+  }
 
   .log {
     float: left;
-    width: 140px;
+    width: 125px;
 
     img {
       float: left;
-      width: 20px;
+      width: 22px;
       margin-right: 5px;
     }
 
     span {
       float: left;
-      font-size: 14px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: bold;
     }
   }
 
   .navIcons {
     float: right;
-    width: 135px;
+    width: 158px;
+    margin-right: 12px;
+
+    .cross {
+      position: relative;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      .triangle {
+        position: absolute;
+        bottom: 7px;
+        left: 15px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: HSLA(0, 0%, 0%, 1) transparent transparent transparent;
+      }
+    }
   }
 
   li {
     float: left;
-    margin-left: 20px;
+    margin-left: 21px;
+
+    span {
+      font-size: 20px;
+    }
   }
 }
 
@@ -278,7 +317,7 @@ li.right {
     }
   }
 
-  .tab-link span{
+  .tab-link span {
     margin-right: 4px;
   }
 }
@@ -334,7 +373,6 @@ li.right {
       background-color: HSLA(104, 56%, 61%, 1);
       border: 1px solid HSLA(104, 44%, 46%, 1);
 
-
       &:hover {
         background-color: HSLA(104, 44%, 46%, 1);
       }
@@ -344,7 +382,6 @@ li.right {
       }
     }
   }
-
 }
 
 .repos {
