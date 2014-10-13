@@ -63,6 +63,7 @@
         <div class="sidebar">
 
             <section class="profile">
+              <div class="avatar_change">Change your avatar</div>
               <!-- profile script -->
             </section>
 
@@ -86,14 +87,14 @@
             <nav class="tabs">
 
               <div class="editBtn">
-                <button class="Edit_profile" name="button"><span class="octicon octicon-pencil"></span>Edit profile</button>
+                <a href="https://github.com/settings/profile"><button class="Edit_profile" name="button"><span class="octicon octicon-pencil"></span>Edit profile</button></a>
               </div>
 
               <ul class="accordion-tabs-minimal">
                 <li class="tab-header-and-content">
                   <a href="#" class="tab-link is-active"><span class="octicon octicon-diff-added"></span>Contributions</a>
                   <div class="tab-content">
-                      <p>This is what the content will be on the contributions page once this page is complete.</p>
+                      <p>This is where the content will go on the contributions page once this page is complete.</p>
                   </div>
                 </li>
                 <li class="tab-header-and-content">
@@ -113,7 +114,7 @@
                           <li><a href="#">Forks</a></li>
                           <li><a href="#">Mirrors</a></li>
                         </ul>
-                        <button class="New" name="button"><span class="octicon octicon-repo"></span>New</button>
+                        <a href="https://github.com/new"><button class="New" name="button"><span class="octicon octicon-repo"></span>New</button></a>
                       </div>
                     </nav>
 
@@ -126,7 +127,7 @@
                 <li class="tab-header-and-content">
                   <a href="#" class="tab-link"><span class="octicon octicon-rss"></span>Public activity</a>
                   <div class="tab-content">
-                    <p>This is what the content will be on the Public activity page once this page is complete.</p>
+                    <p>This is where the content will go on the Public activity page once this page is complete.</p>
                   </div>
                 </li>
               </ul>
@@ -167,7 +168,7 @@
 
 
     <script type="text/template" id="profile">
-      <img src="<%= avatar_url %>"/>
+      <a href="https://github.com/settings/profile"><img src="<%= avatar_url %>"/></a>
       <span><%= name %></span>
       <span><%= login %></span>
     </script>
@@ -185,7 +186,7 @@
         </li>
         <li>
           <span class="octicon octicon-clock"></span>
-          <span>Joined On <%= created_at %></span>
+          <span>Joined on <%= created_at %></span>
         </li>
       </ul>
     </script>
@@ -225,14 +226,14 @@
 
       <div class="repos">
         <div class="repo_left">
-          <span><%= name %></span>
-          <span class="updated"><%= updated_at %></span>
+          <span><a href="#"><%= name %></a></span>
+          <span class="updated">Updated <%= updated_at %></span>
         </div>
 
         <div class="repo_right">
           <span class="language"><%= language %></span>
-          <span class="octicon octicon-star"></span><span><%= stargazers_count %></span>
-          <span class="octicon octicon-git-branch"></span><span><%= forks_count %></span>
+          <a href="https://github.com/DeanGilewicz/<%= name %>/stargazers"<span class="pentagon octicon octicon-star"></span><span><%= stargazers_count %></span></a>
+          <a href="https://github.com/DeanGilewicz/<%= name %>/network"><span class="branch octicon octicon-git-branch"></span><span><%= forks_count %></span></a>
         </div>
       </div>
 

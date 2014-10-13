@@ -135,13 +135,13 @@ $.getJSON(repo_api).done( function (repo_data) {
 });
 
 
-// HEADER NAVIGATION HOVER //
+// PROFILE IMAGE HOVER //
 
-// $('li').hover (function () {
-//   $(this).toggleClass('iconReveal');
-// }
-//
-// );
+  $('.profile').hover (function () {
+
+    $(this).toggleClass('showBox');
+
+  });
 
 
 });
