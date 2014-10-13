@@ -34,7 +34,9 @@
           </div>
           <ul class="navIcons">
             <li class="cross">
-              <a href="#"><span class="octicon octicon-plus"></span><span class="triangle"></span></a>
+              <a href="#">
+                <span class="octicon octicon-plus"></span>
+                <span class="triangle"></span></a>
             </li>
             <li class="mail">
               <a href="https://github.com/notifications"><span class="octicon octicon-inbox"></span></a>
@@ -177,7 +179,7 @@
         </li>
         <li>
           <span class="octicon octicon-clock"></span>
-          <span>Joined on <%= created_at %></span>
+          <span>Joined on <%= $.format.date(created_at, "MMM dd, yyyy") %></span>
         </li>
       </ul>
     </script>
@@ -218,7 +220,7 @@
       <div class="repos">
         <div class="repo_left">
           <span><a href="#"><%= name %></a></span>
-          <span class="updated">Updated <%= updated_at %></span>
+          <span class="updated">Updated <%= $.format.prettyDate(updated_at) %></span>
         </div>
 
         <div class="repo_right">
