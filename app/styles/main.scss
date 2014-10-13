@@ -139,22 +139,25 @@ body {
 
   span {
     display: block;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 800;
+    margin-top: -7px;
 
      &:last-child {
-       font-size: 20px;
-       margin-bottom: 25px;
+       font-size: 22px;
+       font-weight: 400;
+       color: HSLA(0, 0%, 40%, 1);
+       margin-bottom: 12px;
      }
   }
 }
 
 .member {
-  clear: both;
   overflow: auto;
+  font-size: 16px;
   border-top: 1px solid HSLA(0, 0%, 93%, 1);
   border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   padding: 20px 0px;
 
   li {
@@ -167,21 +170,34 @@ body {
   }
 }
 
+.octicon-mail, .octicon-link, .octicon-clock {
+  margin-right: 5px;
+}
+
 .social {
   overflow: auto;
 
   li {
     width: 50px;
     font-size: 12px;
-    color: HSLA(0, 0%, 60%, 1);
     margin: 0 16px;
     text-align: center;
 
-    span {
-      display: block;
+    a {
+      float: left;
       font-size: 30px;
       font-weight: 800;
       color: HSLA(210, 53%, 51%, 1);
+
+      p {
+        font-size: 12px;
+        margin-top: -8px;
+        color: HSLA(0, 0%, 60%, 1);
+
+        &:hover {
+          color: HSLA(210, 53%, 51%, 1);
+        }
+      }
     }
   }
 }
@@ -189,6 +205,7 @@ body {
 li.left {
   float: left;
   display: inline;
+  margin-right: 22px;
 }
 
 li.center {
@@ -200,16 +217,20 @@ li.right {
 }
 
 .orgs {
-  margin-top: 18px;
+  margin-top: 35px;
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
   li {
     float: left;
-    font-size: 18px;
   }
 
   img {
-    width: 42px;
-    margin-top: 5px;
+    width: 46px;
+    margin-top: 14px;
     margin-right: 5px;
   }
 }
@@ -219,7 +240,7 @@ li.right {
 
 .mainCon {
   @include outer-container;
-  margin-top: 20px;
+  margin-top: 21px;
 }
 
 .sidebar {

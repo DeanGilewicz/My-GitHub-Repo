@@ -120,7 +120,7 @@ var repo_api = 'https://api.github.com/users/DeanGilewicz/repos';
 
 // REPO TEMPLATES //
 
-var project_template = $('#project_details').html();// LANGUAGE  NAME
+var project_template = $('#project_details').html();// NAME, LAST UPDATED, LANGUAGE, STARS, FORKS
 var pro_template = _.template(project_template);
 
 
@@ -131,6 +131,7 @@ $.getJSON(repo_api).done( function (repo_data) {
     $('.repo_list').append(pro_template(x));
 
   });
+
 });
 
 

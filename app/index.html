@@ -185,7 +185,7 @@
         </li>
         <li>
           <span class="octicon octicon-clock"></span>
-          <span><%= created_at %></span>
+          <span>Joined On <%= created_at %></span>
         </li>
       </ul>
     </script>
@@ -193,7 +193,7 @@
 
     <script type="text/template" id="followers">
       <ul>
-        <li class="left"><span><%= followers %></span>Followers</li>
+        <li class="left"><a href="https://github.com/DeanGilewicz/followers"><%= followers %><p>Followers</p></a></li>
       </ul>
     </script>
 
@@ -201,7 +201,7 @@
 
     <script type="text/template" id="starred">
       <ul>
-        <li class="center"><span><%= stargazers_count %></span>Starred</li>
+        <li class="center"><a href="https://github.com/stars"><%= stargazers_count %><p>Starred</p></a></li>
       </ul>
     </script>
 
@@ -209,7 +209,7 @@
 
     <script type="text/template" id="following">
       <ul>
-        <li class="right"><span><%= following %></span>Following</li>
+        <li class="right"><a href="https://github.com/DeanGilewicz/following"><%= following %><p>Following</p></a></li>
       </ul>
     </script>
 
@@ -231,9 +231,7 @@
 
         <div class="repo_right">
           <span class="language"><%= language %></span>
-
           <span class="octicon octicon-star"></span><span><%= stargazers_count %></span>
-
           <span class="octicon octicon-git-branch"></span><span><%= forks_count %></span>
         </div>
       </div>
