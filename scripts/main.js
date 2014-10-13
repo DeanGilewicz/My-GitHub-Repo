@@ -29,7 +29,7 @@ var user_api = 'https://api.github.com/users/DeanGilewicz';
 
 // USER TEMPLATES //
 
-var user_log_template = $('#sign_in').html();// IMAGE AND USERNAME //
+var user_log_template = $('#user_log').html();// IMAGE AND USERNAME //
 var ul_template = _.template(user_log_template);
 
 var profile_template = $('#profile').html();// PROFILE PIC, NAME, USERNAME //
@@ -120,7 +120,7 @@ var repo_api = 'https://api.github.com/users/DeanGilewicz/repos';
 
 // REPO TEMPLATES //
 
-var project_template = $('#project_details').html();// LANGUAGE  NAME
+var project_template = $('#project_details').html();// NAME, LAST UPDATED, LANGUAGE, STARS, FORKS
 var pro_template = _.template(project_template);
 
 
@@ -131,8 +131,17 @@ $.getJSON(repo_api).done( function (repo_data) {
     $('.repo_list').append(pro_template(x));
 
   });
+
 });
 
+
+// PROFILE IMAGE HOVER //
+
+  $('.profile').hover (function () {
+
+    $(this).toggleClass('showBox');
+
+  });
 
 
 });
