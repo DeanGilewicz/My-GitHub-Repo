@@ -1,3 +1,3 @@
-## Yo, I'm a Readme
+## Recreating GitHub Repo Page
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+Created my GitHub repo page using SASS, Bourbon Refills, JavaScript, and AJAX (working with real time GitHub API data). 
