@@ -1,0 +1,10 @@
+node_modules
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+.DS_Store
+.idea/*
+token.js
+app/scripts/token.js
+dist/scripts/token.js

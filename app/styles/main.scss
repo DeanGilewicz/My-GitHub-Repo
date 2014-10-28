@@ -1,0 +1,529 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/bitters/app/assets/stylesheets/base';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
+// Custom Styles
+body {
+  background: HSLA(0, 0%, 100%, 1);
+  font-family: "Helvetica", Arial, sans-serif;
+  color: HSLA(0, 0%, 0%, 1);
+}
+
+
+/************** HEADER SECTION ***********************/
+
+.header {
+  width: 100%;
+  overflow: auto;
+  background-color: HSLA(0, 0%, 96%, 1);
+}
+
+.genNav {
+  float: left;
+  width: 740px;
+  margin: 10px 0px 0px 98px;
+  font-size: 13px;
+
+  span {
+    float: left;
+    margin-right: 12px;
+    color: HSLA(0, 0%, 20%, 1);
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
+  }
+
+  #searchField {
+    float: left;
+    width: 395px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 8px 0px 8px 8px;
+  }
+
+  li a {
+    float: left;
+    margin-left: 10px;
+    margin-right: 8px;
+    margin-top: 6px;
+    color: HSLA(0, 0%, 0%, 1);
+    font-size: 14px;
+    font-weight: bold;
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
+  }
+}
+
+.userNav {
+  float: right;
+  width: 300px;
+  margin-top: 15px;
+  margin-right: 76px;
+  font-size: 13px;
+
+  a {
+    color: HSLA(0, 0%, 0%, 1);
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
+  }
+
+  .log {
+    float: left;
+    width: 125px;
+
+    img {
+      float: left;
+      width: 22px;
+      margin-right: 5px;
+    }
+
+    span {
+      float: left;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .navIcons {
+    float: right;
+    width: 158px;
+    margin-right: 12px;
+
+    .cross {
+      position: relative;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      .triangle {
+        position: absolute;
+        bottom: 7px;
+        left: 15px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 4px 0 4px;
+        border-color: HSLA(0, 0%, 0%, 1) transparent transparent transparent;
+      }
+    }
+  }
+
+  li {
+    float: left;
+    margin-left: 21px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+
+/************** SIDEBAR SECTION ***********************/
+
+.sidebar {
+  text-decoration: none;
+  color: HSLA(0, 0%, 0%, 1);
+}
+
+.profile {
+  position: relative;
+
+  .avatar_change {
+    position: absolute;
+    bottom: 35px;
+    right: 60px;
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 8px;
+    color: HSLA(0, 0%, 100%, 1);
+    background-color: HSLA(0, 0%, 10%, 1);
+    border-radius: 4px;
+    opacity: 0.8;
+    display: none;
+  }
+
+  &.showBox .avatar_change {
+    display: block;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  span {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: -7px;
+
+     &:last-child {
+       font-size: 22px;
+       font-weight: 400;
+       color: HSLA(0, 0%, 40%, 1);
+       margin-bottom: 12px;
+     }
+  }
+}
+
+.member {
+  overflow: auto;
+  font-size: 16px;
+  border-top: 1px solid HSLA(0, 0%, 93%, 1);
+  border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
+  margin-bottom: 8px;
+  padding: 20px 0px;
+
+  li {
+    float: left;
+    color: HSLA(0, 0%, 80%, 1);
+  }
+
+  span:last-child {
+    color: HSLA(0, 0%, 0%, 1);
+  }
+}
+
+.octicon-mail, .octicon-link, .octicon-clock {
+  margin-right: 5px;
+}
+
+.social {
+  overflow: auto;
+
+  li {
+    width: 50px;
+    font-size: 12px;
+    margin: 0 16px;
+    text-align: center;
+
+    a {
+      float: left;
+      font-size: 30px;
+      font-weight: 800;
+      color: HSLA(210, 53%, 51%, 1);
+
+      p {
+        font-size: 12px;
+        margin-top: -8px;
+        color: HSLA(0, 0%, 60%, 1);
+
+        &:hover {
+          color: HSLA(210, 53%, 51%, 1);
+        }
+      }
+    }
+  }
+}
+
+li.left {
+  float: left;
+  display: inline;
+  margin-right: 22px;
+}
+
+li.center {
+  float: left;
+}
+
+li.right {
+  float: right;
+}
+
+.orgs {
+  margin-top: 35px;
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  li {
+    float: left;
+  }
+
+  img {
+    width: 46px;
+    margin-top: 14px;
+    margin-right: 5px;
+  }
+}
+
+
+/************** MAIN SECTION ***********************/
+
+.mainCon {
+  @include outer-container;
+  margin-top: 21px;
+}
+
+.sidebar {
+  @include span-columns(3);
+}
+
+.mainArea {
+  @include span-columns(9);
+}
+
+.accordion-tabs-minimal {
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-content-background: $base-background-color;
+  $tab-active-background: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $tab-inactive-hover-color: darken($light-gray, 5);
+  $tab-mode: $medium-screen;
+
+  @include clearfix;
+  margin-bottom: $base-spacing;
+
+  li.tab-header-and-content {
+    @include media($tab-mode) {
+      display: inline;
+    }
+  }
+
+  a.tab-link {
+    background-color: $tab-inactive-color;
+    border-top: $tab-border;
+    color: $dark-gray;
+    display: block;
+    font-weight: 400;
+    padding: $base-spacing/2;
+    padding-bottom: 3px;
+
+    @include media($tab-mode) {
+      //@include inline-block;
+      display: inline-block;
+      border-top: 0;
+    }
+
+    // &:hover {
+    //   color: $base-link-color;
+    // }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.is-active {
+      border-bottom: 0;
+
+      @include media($tab-mode) {
+        border: $tab-border;
+        border-bottom-color: $tab-active-background;
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  .tab-content {
+    display: none;
+    padding: 0px;
+
+    @include media($tab-mode) {
+      border-top: $tab-border;
+      float: left;
+    }
+  }
+}
+
+
+.tabs {
+  @include span-columns(12);
+
+  .editBtn {
+    float: right;
+    margin-top: 3px;
+    font-size: 15px;
+
+    span {
+      margin-right: 5px;
+    }
+
+    .Edit_profile {
+      background-color: HSLA(0, 0%, 96%, 1);
+      color: HSLA(0, 0%, 20%, 1);
+      padding: 5px 10px;
+      border: 1px solid HSLA(0, 0%, 84%, 1);
+
+      &:hover {
+        background-color: HSLA(0, 0%, 90%, 1);
+      }
+    }
+  }
+
+  .tab-link span {
+    margin-right: 4px;
+  }
+}
+
+.repoBar {
+  @include span-columns(12);
+  margin-top: 14px;
+  border-bottom: 1px solid HSLA(0, 0%, 80%, 1);
+
+  #findRepo {
+    display: inline;
+    width: 285px;
+    font-size: 14px;
+  }
+
+  .searchBox {
+    float: left;
+    width: 370px;
+
+    .searchBtn {
+      font-size: 14px;
+      color: HSLA(0, 0%, 20%, 1);
+      background-color: HSLA(0, 0%, 96%, 1);
+      border: 1px solid HSLA(0, 0%, 80%, 1);
+
+      &:hover {
+        background-color: HSLA(0, 0%, 90%, 1);
+      }
+    }
+  }
+
+  .repoLinks {
+    float: right;
+    width: 415px;
+    font-size: 16px;
+
+    li {
+      float: left;
+      margin-top: 6px;
+      margin-left: 10px;
+
+      span {
+      color: HSLA(0, 0%, 20%, 1);
+      font-weight: 800;
+      }
+
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .New {
+      font-size: 14px;
+      margin-left: 15px;
+      padding: 8px 15px;
+      color: HSLA(0, 0%, 100%, 1);
+      background-color: HSLA(104, 56%, 61%, 1);
+      border: 1px solid HSLA(104, 44%, 46%, 1);
+
+      &:hover {
+        background-color: HSLA(104, 44%, 46%, 1);
+      }
+
+      span {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.repos {
+  @include span-columns(12);
+  width: 100%;
+  height: 115px;
+  margin-right: 0px;
+  padding-top: 30px;
+  border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
+  overflow: auto;
+}
+
+.repo_left {
+  float: left;
+
+  span {
+    font-size: 25px;
+    font-weight: 800;
+    color: HSLA(210, 53%, 51%, 1);
+    display: block;
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span:last-child {
+    font-size: 14px;
+    color: HSLA(0, 0%, 45%, 1);
+  }
+}
+
+.repo_right {
+  float: right;
+  font-size: 14px;
+  color: HSLA(0, 0%, 53%, 1);
+  font-weight: bold;
+  padding-top: 10px;
+
+  a {
+    color: HSLA(0, 0%, 53%, 1);
+    margin-left: 10px;
+
+    &:hover {
+      color: HSLA(210, 53%, 51%, 1);
+    }
+  }
+
+  .pentagon, .branch {
+    margin-right: 3px;
+  }
+
+}
+
+/************** FOOTER SECTION ***********************/
+
+.footer {
+  overflow: auto;
+  width: 1090px;
+  margin: 20px auto 0px auto;
+  padding: 38px 0px;
+  border-top: 1px solid HSLA(0, 0%, 93%, 1);
+  font-size: 13px;
+  color: HSLA(240, 3%, 48%, 1);
+
+  .box1 {
+    float: left;
+    width: 380px;
+
+    li {
+      float: left;
+      margin-right: 18px;
+    }
+  }
+
+  .box2 {
+    float: right;
+    width: 305px;
+
+    li {
+      float: left;
+      margin-left: 18px;
+    }
+  }
+
+  span {
+    font-size: 27px;
+    color: HSLA(0, 0%, 80%, 1);
+    margin-left: 150px;
+
+    &:hover {
+      color: HSLA(0, 0%, 70%, 1);
+    }
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+}
